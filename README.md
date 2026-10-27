@@ -4,7 +4,7 @@ A lightweight to-do list that runs in the browser. Add tasks, mark them complete
 
 ## Project link
 
-[Live Link](YOUR_PROJECT_LINK)
+[Live Link](https://veyronshark.github.io/To-Do-List/)
 
 ## Features
 
