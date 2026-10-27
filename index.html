@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>To Do App</title>
+        <link rel="stylesheet" href="style.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+            integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+    </head>
+
+    <body>
+        <main>
+            <div class="heading">
+                <h1>
+                    To Do List
+                    <i class="fa-solid fa-circle-check"></i>
+                </h1>
+                <p>May 18</p>
+            </div>
+
+            <div class="content">
+                <div class="add-search">
+                    <input
+                        type="text"
+                        id="search"
+                        placeholder="Search for task..."
+                    />
+
+                    <button id="add-task-btn">
+                        <i class="fa-solid fa-plus"></i>
+                        Add Task
+                    </button>
+                </div>
+
+                <div class="filters">
+                    <span class="filter active" data-filtername="all">All</span>
+                    <span class="filter" data-filtername="incomplete"
+                        >Incomplete</span
+                    >
+                    <span class="filter" data-filtername="complete"
+                        >Completed</span
+                    >
+                </div>
+
+                <div id="tasks">
+                    <!-- Tasks go here -->
+                </div>
+            </div>
+
+            <div class="footing">
+                <button id="clear-completed-btn">Clear Completed</button>
+            </div>
+        </main>
+
+        <dialog id="change-task" class="modal">
+            <input
+                id="new-task-text"
+                type="text"
+                placeholder="Enter new task title..."
+                class="modal-input"
+            />
+            <button id="change-task-btn" class="modal-btn">Save</button>
+        </dialog>
+
+        <dialog id="add-task" class="modal">
+            <input
+                id="task-text"
+                type="text"
+                placeholder="Enter task title..."
+                class="modal-input"
+            />
+            <button id="add-task-modal-btn" class="modal-btn">Add Task</button>
+
+            <button id="cancel" class="modal-btn">Cancel</button>
+        </dialog>
+    </body>
+
+    <script src="script.js"></script>
+</html>

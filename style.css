@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: rgb(53, 130, 254);
+    --success: rgb(107, 206, 107);
+    --danger: rgb(254, 113, 113);
+    --bg-gray: rgb(218, 218, 218);
+    --dull-gray: rgb(242, 242, 242);
+}
+
+body {
+    background-color: rgb(233, 233, 233);
+    min-height: 100vh;
+    display: flex;
+    padding: 4rem 2rem;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+}
+
+main {
+    background-color: var(--bg-gray);
+    width: 100%;
+    max-width: 550px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.heading {
+    background-color: var(--primary);
+    color: white;
+    padding: 1rem;
+}
+
+h1 {
+    margin-bottom: 4px;
+}
+
+.add-search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem;
+    gap: 1rem;
+}
+
+#search {
+    border: none;
+    font-size: 1rem;
+    padding: 0.6rem 0.8rem;
+    border-radius: 0.2rem;
+    flex: 1;
+}
+
+#add-task-btn {
+    border: none;
+    padding: 0.6rem;
+    font-size: 1rem;
+    color: white;
+    background-color: var(--primary);
+    border-radius: 0.2rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#add-task-btn:hover {
+    background-color: rgb(41, 97, 188);
+}
+
+input:focus,
+button:focus {
+    outline: none;
+}
+
+.filters {
+    width: 100%;
+    display: flex;
+}
+
+.filter {
+    display: inline-block;
+    background: var(--dull-gray);
+    flex: 1;
+    text-align: center;
+    padding: 0.5rem 0;
+    cursor: pointer;
+    transition: all 0.1s;
+}
+
+.filter.active {
+    background-color: white;
+}
+
+.filter:hover {
+    background-color: rgb(235, 235, 235);
+}
+
+.filter.active:hover {
+    background-color: white;
+}
+
+#tasks {
+    background-color: white;
+}
+
+.task {
+    padding: 0.5rem 1rem;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+}
+
+.task:hover {
+    background-color: var(--dull-gray);
+}
+
+.task input {
+    -webkit-appearance: none;
+    border: 2px solid var(--primary);
+    width: 18px;
+    height: 18px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.task input::after {
+    content: "✔";
+    color: white;
+}
+
+.icon {
+    color: rgb(149, 149, 149);
+    position: absolute;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.delete-btn {
+    right: 0.5rem;
+}
+
+.delete-btn:hover {
+    color: var(--danger);
+}
+
+.edit-btn {
+    right: 2.5rem;
+}
+
+.edit-btn:hover {
+    color: var(--primary);
+}
+
+.footing {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.5rem;
+}
+
+#clear-completed-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: gray;
+}
+
+#clear-completed-btn:hover {
+    color: var(--danger);
+    text-decoration: underline;
+}
+
+.task.completed {
+    text-decoration: line-through;
+    background-color: rgb(235, 235, 235);
+}
+
+.task.completed input {
+    background-color: var(--primary);
+}
+
+.modal {
+    background-color: var(--bg-gray);
+    position: fixed;
+    margin: auto auto;
+    border: none;
+    padding: 1rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.147);
+}
+
+.modal input {
+    border: none;
+    font-size: 1rem;
+    padding: 0.6rem 0.8rem;
+    border-radius: 0.2rem;
+}
+
+.modal button {
+    border: none;
+    padding: 0.6rem;
+    font-size: 1rem;
+    color: white;
+    background-color: var(--primary);
+    border-radius: 0.2rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.modal button:hover {
+    background-color: rgb(41, 97, 188);
+}
